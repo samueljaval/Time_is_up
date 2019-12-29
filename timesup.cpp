@@ -117,4 +117,5 @@ int main()
         while (start != "start") cin >> start;
         play(nb_words, words);
     }
+    return 0;
 }
