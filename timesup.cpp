@@ -107,10 +107,6 @@ int main()
         cout << "You have " << words_left + 1 << " more words to enter " << endl;
         not_use_first ++;
     }
-    for (int i = 0; i < words.size(); i++)
-    {
-        cout << words[i] << "  eeeee " << endl;
-    }
     for (int i = 0 ; i < 3; i++)
     {
         system("clear");
