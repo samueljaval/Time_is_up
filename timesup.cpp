@@ -31,14 +31,23 @@ void choose_player()
 
 void play(int nb_words, vector<string> words)
 {
+    extern int active_team;
+    extern int score_team1;
+    extern int score_team2;
     if (nb_words == 0) return;
 
     string entry;
     cout << nb_words << " is the current number of words in the list" << endl;
     int randNum = rand()%(nb_words);
-    cout << "\n\n\n" << words[randNum] << "\n\n\n" << endl;
+    cout << "\n\n\n\n\n\n" << "         WORD TO GUESS : " << words[randNum] << "\n\n\n\n\n\n" << endl;
     cout << "Press n to next, s to skip, next for next player" << endl;
     cin >> entry;
+    if (entry == "next")
+    {
+        choose_player();
+        play(nb_words, words);
+    }
+    system("clear");
     while (entry != "n" && entry != "s" && entry != "next")
     {
         cin >> entry;
@@ -47,13 +56,10 @@ void play(int nb_words, vector<string> words)
     {
         play(nb_words, words);
     }
-    if (entry == "next")
-    {
-        choose_player();
-        play(nb_words, words);
-    }
     if (entry == "n")
     {
+        if (active_team == 1) score_team1 ++;
+        else score_team2 ++;
         nb_words -= 1;
         words.erase(words.begin()+(randNum));
         play(nb_words, words);
@@ -67,6 +73,8 @@ vector<string> team2;
 int nb_team1;
 int nb_team2;
 int active_team = 1;
+int score_team1 = 0;
+int score_team2 = 0;
 //////////////////
 
 int main()
@@ -107,15 +115,27 @@ int main()
         cout << "You have " << words_left + 1 << " more words to enter " << endl;
         not_use_first ++;
     }
+    for (int i = 0; i < words.size(); i++)
+    {
+        cout << words[i] << "  eeeee " << endl;
+    }
     for (int i = 0 ; i < 3; i++)
     {
         system("clear");
-        if (i>0) cout << "THE ROUND IS OVER\n" << endl;
+        if (i>0)
+        {
+            cout << "THE ROUND IS OVER\n" << endl;
+            cout << "Team 1's score is  : "  << score_team1 << endl;
+            cout << "Team 2's score is  : "  << score_team2 << endl;
+            cout << "\n\n";
+        }
         choose_player();
         cout << "Type \"start\" when ready to play" << endl;
         string start;
         while (start != "start") cin >> start;
         play(nb_words, words);
+        cout << "Team 1's score is  : "  << score_team1 << endl;
+        cout << "Team 2's score is  : "  << score_team2 << endl;
     }
-    return 0;
 }
+
