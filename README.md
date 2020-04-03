@@ -11,4 +11,5 @@ There are 3 rounds overall :
 - In the first round, the player tries to make their team guess the word by describing it without saying the word. 
 - In the second round, the player tries to make thier team guess the word by using only one word to describe it. 
 - In the third round, the player tries to make their team guess the word by miming it. 
+
 The words are the same at each round, so players should try to remember what they are to make the next round easier. 
