@@ -1,7 +1,7 @@
 # Time's up!
 
 Easy to use command line application to play Time's up with friends. 
-All you need to do is compile and run the cpp script. 
+All you need to do is compile and run the cpp script (or download the executable in the bin directory). 
 
 The rules are the following :
 There are two team of about the same number of people. Players take turns at trying to make their team guess what the word is. 
