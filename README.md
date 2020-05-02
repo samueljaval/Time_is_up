@@ -6,7 +6,7 @@ All you need to do is compile and run the cpp script (or download the executable
 The rules are the following :
 There are two team of about the same number of people. Players take turns at trying to make their team guess what the word is. 
 When a player is playing, they should be the only player looking at the computer. 
-Players keep taking turns until the round is over. Each player's turn usually is 45sec (can make it whatever you want). The active team plays until all of its player have gone, then the other team get to play and this goes on until the round is over. The round is over whenever there aren't any words left. 
+Players keep taking turns until the round is over. Each player's turn usually is 45sec (can make it whatever you want). The active team plays until all of its player have gone, then the other team gets to play and this goes on until the round is over. The round is over whenever there aren't any words left. 
 
 There are 3 rounds overall :
 - In the first round, the player tries to make their team guess the word by describing it without saying the word. 
