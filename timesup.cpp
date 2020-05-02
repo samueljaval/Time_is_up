@@ -58,7 +58,7 @@ void play(int nb_words, vector<string> words)
     }
     if (entry == "n")
     {
-        if (active_team == 1) score_team1 ++;
+        if (active_team == -1) score_team1 ++;  // cause flip sign right after we choose team 
         else score_team2 ++;
         nb_words -= 1;
         words.erase(words.begin()+(randNum));
@@ -138,4 +138,3 @@ int main()
         cout << "Team 2's score is  : "  << score_team2 << endl;
     }
 }
-
